@@ -1,7 +1,10 @@
 using LMSService as LMS from '../../../srv/service';
 
 annotate LMS.Students @(UI : {
-    SelectionFields : [],
+    SelectionFields : [
+    email,
+    first_name
+    ],
     LineItem        : [
     {
         Value : email,

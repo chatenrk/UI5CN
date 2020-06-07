@@ -1,0 +1,16 @@
+---
+applications:
+  - name: lmshdiconf
+    path: ./gen/db
+    no-route: true
+    health-check-type: process
+    memory: 128M
+    services:
+      - lmshanasrv
+
+  - name: capml1
+    path: .
+    random-route: true
+    memory: 128M
+    services:
+      - lmshanasrv
